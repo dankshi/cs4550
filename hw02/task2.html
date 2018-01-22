@@ -1,0 +1,34 @@
+<head>
+
+</head>
+
+<body>
+	<h1>HW02 Task 2</h1>
+	<h2 id="number">10</h2>
+
+	<button type="button" onclick="displayAlert()">Alert</button>
+	<button type="button" onclick="incrementNumber()">Increment</button>
+	<button type="button" onclick="appendPara()">Append</button>
+
+
+
+<script>
+function displayAlert() {
+	var num = document.getElementById("number").innerHTML;
+	alert(num);
+}
+function incrementNumber() {
+	var num = document.getElementById("number").innerHTML;
+	document.getElementById("number").innerHTML = +num+1;
+}
+function appendPara() {
+        var num = document.getElementById("number").innerHTML;
+        var toAppend = document.createElement("P");
+	var theAppended = document.createTextNode(num);
+	toAppend.appendChild(theAppended);
+	document.body.appendChild(toAppend)
+	
+
+}
+</script>
+</body>
