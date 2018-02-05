@@ -6,11 +6,6 @@ defmodule Calc do
   @doc """
   Hello world.
 
-  ## Examples
-
-      iex> Calc.hello
-      :world
-
   """
   def eval(input) do
     input_list = String.split(input)
@@ -21,6 +16,7 @@ defmodule Calc do
       Enum.member?(input_list, "-") -> sub(first_number, last_number)
       Enum.member?(input_list, "*") -> mult(first_number, last_number)
       Enum.member?(input_list, "/") -> divi(first_number, last_number)
+      true -> IO.puts "Wrong input format"
     end
   end
 
