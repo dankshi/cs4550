@@ -5,7 +5,7 @@
 # Inside the script, you can read and write to any of your
 # repositories directly:
 #
-#     Tracker.Repo.insert!(%Tracker.SomeModel{})
+#     Tracker.Repo.insert!(%Tracker.SomeSchema{})
 #
 # We recommend using the bang functions (`insert!`, `update!`
-# and so on) as they will halt execution if something goes wrong.
+# and so on) as they will fail if something goes wrong.

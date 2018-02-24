@@ -10,10 +10,10 @@ config :tracker,
   ecto_repos: [Tracker.Repo]
 
 # Configures the endpoint
-config :tracker, Tracker.Endpoint,
+config :tracker, TrackerWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "FZkSCeCNypXIJP3YtlfWx5roFK3gjoYkbgZ1NmeiEZcj9R9XcPQEw342QYhpN9Gg",
-  render_errors: [view: Tracker.ErrorView, accepts: ~w(html json)],
+  secret_key_base: "yji08B+fwrWjDzrrAZeOEtcw5HPse5hfYrvK8JoXgcY2LrIHWFjK08LOTDXMDgyM",
+  render_errors: [view: TrackerWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Tracker.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
@@ -21,18 +21,6 @@ config :tracker, Tracker.Endpoint,
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
-
-# Import environment specific config. This must remain at the bottom
-# of this file so it overrides the configuration defined above.
-config :guardian, Guardian,
-  allowed_algos: ["HS512"], # optional
-  verify_module: Guardian.JWT,  # optional
-  issuer: "Tracker",
-  ttl: { 30, :days },
-  allowed_drift: 2000,
-  verify_issuer: true, # optional
-  secret_key: "twWFagkP7EWzluVoSodOEmZ/hSKN8lI8ptKSJ4rM0vsUlTHluw29d233R7MFE08b",
-  serializer: Tracker.GuardianSerializer
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
