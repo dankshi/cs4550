@@ -1,4 +1,4 @@
-# Hangman
+# Connect 4 EXTREME (Math Edition)
 
 To start your Phoenix server:
 
